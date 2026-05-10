@@ -18,6 +18,7 @@ Autonomous_Mobile_Robot/
 ├── .gitignore                   # Workspace cleaning rules
 └── README.md                    # Project documentation
 
+
 🛠 Engineering Challenges & Debugging
 
 This project involved significant troubleshooting to achieve a stable navigation state. Below are the key engineering hurdles resolved during development:
@@ -49,4 +50,3 @@ Prerequisites
     Nav2 Binaries: sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup
 
     Gazebo Sim
-
