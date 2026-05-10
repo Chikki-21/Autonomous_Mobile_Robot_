@@ -1,0 +1,137 @@
+<?xml version  = "1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="gazebo_tags.urdf.xacro"/>
+
+    <material name = "blue">
+        <color rgba = "0 0 0.5 1"/>
+    </material>
+
+    <material name = "gray">
+        <color rgba = "0.5 0.5 0.5 1"/>
+    </material>
+
+    <xacro:property name ="body_length" value="0.6"/>
+    <xacro:property name ="body_width" value="0.4"/>
+    <xacro:property name ="body_height" value="0.2"/>
+    <xacro:property name ="wheel_length" value="0.05"/>
+    <xacro:property name ="wheel_radius" value="0.1"/>
+
+    <link name = "base_footprint">
+    </link>
+
+    <link name = "base_link">
+        <visual>
+            <geometry>
+                <box size = "${body_length} ${body_width} ${body_height}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name = "blue"/>
+        </visual>
+        <xacro:base_link_inertia  m = "5.0" x = "${body_length}" y = "${body_width}" z = "${body_height}"/>
+        <xacro:base_link_collision l ="${body_length}" b = "${body_width}" h = "${body_height}"/>
+    </link>
+
+    <link name = "left_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder length = "${wheel_length}"  radius="${wheel_radius}"/>
+            </geometry>
+            <origin xyz = "0 0 0" rpy="1.57 0 0"/>
+            <material name = "gray"/>
+        </visual>
+        <xacro:wheel_inertia m = "0.2" r = "${wheel_radius}" h="${wheel_length}"/>
+        <xacro:wheel_collision r = "${wheel_radius}"/>
+    </link>
+    
+    <link name = "right_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder length="${wheel_length}" radius="${wheel_radius}"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.57 0 0"/>
+            <material name = "gray"/>
+        </visual>
+        <xacro:wheel_inertia m = "0.2" r = "${wheel_radius}" h="${wheel_length}"/>
+        <xacro:wheel_collision r = "${wheel_radius}"/>
+    </link>
+
+    <link name = "left_front_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder length="${wheel_length}" radius="${wheel_radius}"/>
+            </geometry>
+            <origin xyz = "0 0 0" rpy="1.57 0 0"/>
+            <material name = "gray"/>
+        </visual>
+        <xacro:wheel_inertia m="0.2" r="${wheel_radius}" h="${wheel_length}"/>
+        <xacro:wheel_collision r="${wheel_radius}"/>
+    </link>
+
+    <link name ="right_front_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder length="${wheel_length}" radius="${wheel_radius}"/>
+            </geometry>
+            <origin xyz ="0 0 0" rpy="1.57 0 0"/>
+            <material name="gray"/>
+        </visual>
+        <xacro:wheel_inertia m="0.2" r="${wheel_radius}" h="${wheel_length}"/>
+        <xacro:wheel_collision r="${wheel_radius}"/>
+    </link>
+
+    <link name = "laser_scan_link">
+        <visual>
+            <geometry>
+                <cylinder length="${wheel_length}" radius="${wheel_radius}"/>
+            </geometry>
+            <origin xyz ="0 0 0"  rpy="0 0 0 "/>
+            <material name = "gray"/>
+        </visual>
+        <xacro:laser_scan_inertia m="0.05" r="${wheel_radius}" h="${wheel_length}"/>
+        <xacro:laser_scan_collision r="${wheel_radius}" l="${wheel_length}"/>
+    </link>
+    
+
+    <joint name = "base_left_wheel_joint" type="continuous">
+        <parent link = "base_link"/>
+        <child link = "left_wheel_link"/>
+        <origin xyz = "${-body_length / 4.0} ${(body_width + wheel_length) / 2.0} ${-body_height / 2.0}" rpy = "0 0 0"/>
+        <axis xyz = "0 1 0"/>
+    </joint>
+
+    <joint name ="base_right_wheel_joint" type="continuous">
+        <parent link = "base_link"/>
+        <child link = "right_wheel_link"/>
+        <origin xyz = "${-body_length / 4.0} ${-(body_width + wheel_length) / 2.0} ${-body_height / 2.0}" rpy="0 0 0"/>
+        <axis xyz = "0 1 0"/>
+    </joint>
+
+    <joint name = "base_left_front_joint" type="continuous">
+        <parent link ="base_link"/>
+        <child link = "left_front_wheel_link"/>
+        <origin xyz="${body_length / 4.0} ${(body_width + wheel_length) / 2.0} ${-body_height / 2.0}" rpy="0 0 0 "/>
+        <axis xyz="0 1 0 "/>
+    </joint>
+
+        <joint name="base_right_front_joint" type="continuous">
+        <parent link ="base_link"/>
+        <child link = "right_front_wheel_link"/>
+        <origin xyz = "${body_length / 4.0} ${-(body_width + wheel_length) / 2.0} ${-body_height / 2.0}" rpy="0 0 0 "/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name = "base_foot_joint" type="fixed">
+        <parent link = "base_footprint"/>
+        <child link = "base_link"/>
+        <origin xyz = "0 0 ${wheel_radius + (body_height / 2.0)}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name ="base_laser_scan_joint" type="fixed">
+        <parent link = "base_link"/>
+        <child link = "laser_scan_link"/>
+        <origin xyz = "0 0 ${(body_height + wheel_length)/2}" rpy="0 0 0"/>
+    </joint>
+
+</robot>
