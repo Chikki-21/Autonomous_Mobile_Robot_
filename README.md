@@ -21,13 +21,13 @@ Autonomous_Mobile_Robot/
 
 ## 🚀 Project Overview
 
-The system features an autonomous mobile robot capable of:
+ The system features an autonomous mobile robot capable of:
 
-    Dynamic Path Planning: Real-time trajectory generation using the DWB Local Planner.
+  Dynamic Path Planning: Real-time trajectory generation using the DWB Local Planner.
 
-    Robust Localization: AMCL-based position tracking within a pre-mapped Gazebo environment.
+  Robust Localization: AMCL-based position tracking within a pre-mapped Gazebo environment.
 
-    Lifecycle Management: Managed node transitions to ensure system stability before task execution.
+  Lifecycle Management: Managed node transitions to ensure system stability before task execution.
 
     
 ## 🛠 Engineering Challenges & Debugging
@@ -54,11 +54,11 @@ This project involved significant troubleshooting to achieve a stable navigation
 
  ## Prerequisites
 
-    OS: Ubuntu 24.04
+   OS: Ubuntu 24.04
 
-    ROS 2 jazzy
+   ROS 2 jazzy
 
-    Nav2 Binaries: sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup
+   Nav2 Binaries: sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup
 
-    Gazebo Sim
+   Gazebo Sim
 
