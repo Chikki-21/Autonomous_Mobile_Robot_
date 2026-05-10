@@ -88,10 +88,5 @@ Execution
 
     ros2 launch bot_bringup gazebo.launch.py
 
-    Launch Navigation Stack:
-    Bash
-
-    ros2 launch bot_bringup main_nav2.launch.py
-
     Command Navigation: Use the 2D Pose Estimate in RViz2 to localize, then provide a 2D Nav Goal to initiate autonomous movement.
 
