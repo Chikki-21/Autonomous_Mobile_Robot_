@@ -19,6 +19,17 @@ Autonomous_Mobile_Robot/
 └── README.md                    # Project documentation
 ```
 
+🚀 Project Overview
+
+The system features an autonomous mobile robot capable of:
+
+    Dynamic Path Planning: Real-time trajectory generation using the DWB Local Planner.
+
+    Robust Localization: AMCL-based position tracking within a pre-mapped Gazebo environment.
+
+    Lifecycle Management: Managed node transitions to ensure system stability before task execution.
+    
+
 🛠 Engineering Challenges & Debugging
 
 This project involved significant troubleshooting to achieve a stable navigation state. Below are the key engineering hurdles resolved during development:
