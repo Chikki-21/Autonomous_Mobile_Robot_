@@ -40,7 +40,7 @@ This project involved significant troubleshooting to achieve a stable navigation
 
     Solution: Flattened the YAML hierarchy to match exact node names and defined a comprehensive list of critics (GoalAlign, PathAlign, ObstacleFootprint) to allow the planner to initialize.
 
-
+```
 Prerequisites
 
     OS: Ubuntu 24.04
@@ -50,3 +50,4 @@ Prerequisites
     Nav2 Binaries: sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup
 
     Gazebo Sim
+```
