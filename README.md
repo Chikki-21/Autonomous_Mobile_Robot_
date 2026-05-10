@@ -62,3 +62,36 @@ This project involved significant troubleshooting to achieve a stable navigation
 
    Gazebo Sim
 
+   Nav2 Binaries: ```bash
+    sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup
+
+
+Installation & Build
+
+    Clone the repository:
+    Bash
+
+    cd ~/ros2_ws/src
+    git clone [https://github.com/yourusername/nav2_robot_project.git](https://github.com/yourusername/nav2_robot_project.git)
+
+    Build the workspace:
+    Bash
+
+    cd ~/ros2_ws
+    colcon build 
+    source install/setup.bash
+
+Execution
+
+    Launch Simulation:
+    Bash
+
+    ros2 launch bot_bringup gazebo.launch.py
+
+    Launch Navigation Stack:
+    Bash
+
+    ros2 launch bot_bringup main_nav2.launch.py
+
+    Command Navigation: Use the 2D Pose Estimate in RViz2 to localize, then provide a 2D Nav Goal to initiate autonomous movement.
+
