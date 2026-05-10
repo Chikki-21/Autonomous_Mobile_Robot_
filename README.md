@@ -19,7 +19,7 @@ Autonomous_Mobile_Robot/
 └── README.md                    # Project documentation
 ```
 
-🚀 Project Overview
+## 🚀 Project Overview
 
 The system features an autonomous mobile robot capable of:
 
@@ -30,7 +30,7 @@ The system features an autonomous mobile robot capable of:
     Lifecycle Management: Managed node transitions to ensure system stability before task execution.
 
     
-🛠 Engineering Challenges & Debugging
+## 🛠 Engineering Challenges & Debugging
 
 This project involved significant troubleshooting to achieve a stable navigation state. Below are the key engineering hurdles resolved during development:
 1. The Clock Synchronization Mismatch
@@ -52,7 +52,7 @@ This project involved significant troubleshooting to achieve a stable navigation
     Solution: Flattened the YAML hierarchy to match exact node names and defined a comprehensive list of critics (GoalAlign, PathAlign, ObstacleFootprint) to allow the planner to initialize.
 
 
- Prerequisites
+ ## Prerequisites
 
     OS: Ubuntu 24.04
 
