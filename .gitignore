@@ -1,0 +1,20 @@
+# ROS 2 Build Artifacts
+# These are generated locally and should never be uploaded
+build/
+install/
+log/
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local IDE & OS settings
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Gazebo / Simulation logs
+.gazebo/
