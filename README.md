@@ -16,7 +16,8 @@ Autonomous_Mobile_Robot/
 ├── follower_robot_description/  # Robot model and visualization
 │   ├── urdf/                    # Xacro files with fixed TF origins                
 ├── .gitignore                   # Workspace cleaning rules
-└── README.md                    # Project documentation ```
+└── README.md                    # Project documentation
+```
 
 ## 🚀 Project Overview
 
