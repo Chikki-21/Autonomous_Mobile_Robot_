@@ -19,9 +19,9 @@ Autonomous_Mobile_Robot/
 └── README.md                    # Project documentation
 ```
 
-## 🚀 Project Overview
+ ## 🚀 Project Overview
 
- The system features an autonomous mobile robot capable of:
+  The system features an autonomous mobile robot capable of:
 
     1.Dynamic Path Planning: Real-time trajectory generation using the DWB Local Planner.
 
