@@ -11,7 +11,8 @@ Autonomous_Mobile_Robot/
 ├── bot_bringup/                 # Core navigation & launch logic
 │   ├── config/                  # nav2_params.yaml, gazebo_bridge.yaml
 │   ├── launch/                  # Modular xml launch files         # Custom Behavior Tree XML files
-│   └── maps/                    # Environment maps (.yaml & .pgm) 
+│   └── maps/                    # Environment maps (.yaml & .pgm)
+|   └── scripts/
 |── urdf/                    # Xacro files with fixed TF origins                
 ├── .gitignore                   # Workspace cleaning rules
 └── README.md                    # Project documentation
